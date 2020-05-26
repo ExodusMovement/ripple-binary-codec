@@ -1,5 +1,8 @@
 const makeClass = require('../utils/make-class');
-const {decodeAccountID, encodeAccountID} = require('@exodus/ripple-address-codec');
+const {
+  decodeAccountID,
+  encodeAccountID
+} = require('@exodus/ripple-address-codec');
 const {Hash160} = require('./hash-160');
 
 const AccountID = makeClass({
