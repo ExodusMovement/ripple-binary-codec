@@ -3,9 +3,7 @@
   "version": "0.2.6",
   "description": "XRP Ledger binary codec",
   "files": [
-    "distrib/npm/*",
-    "bin/*",
-    "test/*"
+    "distrib/npm/*"
   ],
   "main": "distrib/npm/",
   "directories": {
