@@ -1,4 +1,4 @@
-const Decimal = require('decimal.js');
+const Decimal = require('decimal.js').default;
 const {bytesToHex, slice, parseBytes} = require('./utils/bytes-utils');
 const {UInt64} = require('./types');
 const BN = require('bn.js');
