@@ -13,7 +13,7 @@
     "@exodus/ripple-address-codec": "^4.1.1-alpha0",
     "bn.js": "^4.11.8",
     "create-hash": "^1.2.0",
-    "decimal.js": "^10.2.0",
+    "decimal.js": "7.2.1",
     "inherits": "^2.0.4",
     "lodash": "^4.17.15"
   },
