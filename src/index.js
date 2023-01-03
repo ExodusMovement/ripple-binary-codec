@@ -1,12 +1,13 @@
 const assert = require('assert');
 const coreTypes = require('./coretypes');
+const encode = require('./encode')
+const encodeForSigning = require('./encode-for-signing')
 const {quality,
        binary: {bytesToHex,
                 signingData,
                 signingClaimData,
                 multiSigningData,
                 binaryToJSON,
-                serializeObject,
                 BinaryParser}} = coreTypes;
 
 function decodeLedgerData(binary) {
@@ -30,15 +31,6 @@ function decode(binary) {
   return binaryToJSON(binary);
 }
 
-function encode(json) {
-  assert(typeof json === 'object');
-  return bytesToHex(serializeObject(json));
-}
-
-function encodeForSigning(json) {
-  assert(typeof json === 'object');
-  return bytesToHex(signingData(json));
-}
 
 function encodeForSigningClaim(json) {
   assert(typeof json === 'object');
