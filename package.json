@@ -1,6 +1,6 @@
 {
   "name": "@exodus/ripple-binary-codec",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "XRP Ledger binary codec",
   "files": [
     "distrib/npm/*"
