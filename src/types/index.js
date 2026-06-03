@@ -1,20 +1,20 @@
-const enums = require('../enums');
+import enums from '../enums/index.js';
+import {AccountID} from './account-id.js';
+import {Amount} from './amount.js';
+import {Blob} from './blob.js';
+import {Currency} from './currency.js';
+import {Hash128} from './hash-128.js';
+import {Hash160} from './hash-160.js';
+import {Hash256} from './hash-256.js';
+import {PathSet} from './path-set.js';
+import {STArray} from './st-array.js';
+import {STObject} from './st-object.js';
+import {UInt16} from './uint-16.js';
+import {UInt32} from './uint-32.js';
+import {UInt64} from './uint-64.js';
+import {UInt8} from './uint-8.js';
+import {Vector256} from './vector-256.js';
 const {Field} = enums;
-const {AccountID} = require('./account-id');
-const {Amount} = require('./amount');
-const {Blob} = require('./blob');
-const {Currency} = require('./currency');
-const {Hash128} = require('./hash-128');
-const {Hash160} = require('./hash-160');
-const {Hash256} = require('./hash-256');
-const {PathSet} = require('./path-set');
-const {STArray} = require('./st-array');
-const {STObject} = require('./st-object');
-const {UInt16} = require('./uint-16');
-const {UInt32} = require('./uint-32');
-const {UInt64} = require('./uint-64');
-const {UInt8} = require('./uint-8');
-const {Vector256} = require('./vector-256');
 
 const coreTypes = {
   AccountID,
@@ -42,4 +42,4 @@ Field.TransactionType.associatedType = enums.TransactionType;
 Field.TransactionResult.associatedType = enums.TransactionResult;
 Field.LedgerEntryType.associatedType = enums.LedgerEntryType;
 
-module.exports = coreTypes;
+export default coreTypes;

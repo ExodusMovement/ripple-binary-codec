@@ -1,7 +1,8 @@
-const makeClass = require('../utils/make-class');
-const {ensureArrayLikeIs, SerializedType} = require('./serialized-type');
-const {Field} = require('../enums');
-const {STObject} = require('./st-object');
+import makeClass from '../utils/make-class.js';
+import {ensureArrayLikeIs, SerializedType} from './serialized-type.js';
+import enums from '../enums/index.js';
+import {STObject} from './st-object.js';
+const {Field} = enums;
 const {ArrayEndMarker} = Field;
 
 const STArray = makeClass({
@@ -33,6 +34,6 @@ const STArray = makeClass({
   }
 });
 
-module.exports = {
+export {
   STArray
 };

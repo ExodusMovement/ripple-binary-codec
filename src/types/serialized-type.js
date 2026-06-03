@@ -1,5 +1,5 @@
-const {bytesToHex, slice} = require('../utils/bytes-utils');
-const {BytesList} = require('../serdes/binary-serializer');
+import {bytesToHex, slice} from '../utils/bytes-utils.js';
+import {BytesList} from '../serdes/binary-serializer.js';
 
 const Comparable = {
   lt(other) {
@@ -57,7 +57,7 @@ function ensureArrayLikeIs(Type, arrayLike) {
   };
 }
 
-module.exports = {
+export {
   ensureArrayLikeIs,
   SerializedType,
   Comparable

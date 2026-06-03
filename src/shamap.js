@@ -1,8 +1,9 @@
-const assert = require('assert');
-const makeClass = require('./utils/make-class');
-const {Hash256} = require('./types');
-const {HashPrefix} = require('./hash-prefixes');
-const {Sha512Half: Hasher} = require('./hashes');
+import assert from 'assert';
+import makeClass from './utils/make-class.js';
+import types from './types/index.js';
+import {HashPrefix} from './hash-prefixes.js';
+import {Sha512Half as Hasher} from './hashes.js';
+const {Hash256} = types;
 
 const ShaMapNode = makeClass({
   virtuals: {
@@ -103,6 +104,6 @@ const ShaMap = makeClass({
   inherits: ShaMapInner
 });
 
-module.exports = {
+export {
   ShaMap
 };

@@ -1,4 +1,4 @@
-const {serializeUIntN} = require('./utils/bytes-utils');
+import {serializeUIntN} from './utils/bytes-utils.js';
 
 function bytes(uint32) {
   return serializeUIntN(uint32, 4);
@@ -26,6 +26,6 @@ const HashPrefix = {
   paymentChannelClaim: bytes(0x434C4D00)
 };
 
-module.exports = {
+export {
   HashPrefix
 };

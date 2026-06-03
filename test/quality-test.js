@@ -1,5 +1,6 @@
-const assert = require('assert');
-const {quality, binary: {bytesToHex}} = require('../src/coretypes');
+import assert from 'assert';
+import coreTypes from '../src/coretypes.js';
+const {quality, binary: {bytesToHex}} = coreTypes;
 
 describe('Quality encode/decode', function() {
   const bookDirectory =

@@ -1,12 +1,12 @@
-const _ = require('lodash');
-const BN = require('bn.js');
-const assert = require('assert');
-const types = require('./types');
+import _ from 'lodash';
+import BN from 'bn.js';
+import assert from 'assert';
+import types from './types/index.js';
+import {ShaMap} from './shamap.js';
+import {HashPrefix} from './hash-prefixes.js';
+import {Sha512Half} from './hashes.js';
+import {BinarySerializer, serializeObject} from './binary.js';
 const {STObject, Hash256} = types;
-const {ShaMap} = require('./shamap');
-const {HashPrefix} = require('./hash-prefixes');
-const {Sha512Half} = require('./hashes');
-const {BinarySerializer, serializeObject} = require('./binary');
 
 function computeHash(itemizer, itemsJson) {
   const map = new ShaMap();
@@ -65,7 +65,7 @@ function ledgerHash(header) {
   return hash.finish();
 }
 
-module.exports = {
+export {
   accountStateHash,
   transactionTreeHash,
   ledgerHash

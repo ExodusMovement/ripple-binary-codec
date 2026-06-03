@@ -1,8 +1,8 @@
-const assert = require('assert');
-const _ = require('lodash');
-const {parseBytes, serializeUIntN} = require('./../utils/bytes-utils');
-const makeClass = require('./../utils/make-class');
-const enums = require('./definitions.json');
+import assert from 'assert';
+import _ from 'lodash';
+import {parseBytes, serializeUIntN} from './../utils/bytes-utils.js';
+import makeClass from './../utils/make-class.js';
+import enums from './definitions.json' with { type: 'json' };
 
 function transformWith(func, obj) {
   return _.transform(obj, func);
@@ -122,4 +122,4 @@ Enums.Field = makeClass({
   }
 });
 
-module.exports = Enums;
+export default Enums;

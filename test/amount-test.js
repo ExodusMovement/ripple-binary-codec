@@ -1,7 +1,8 @@
-const _ = require('lodash');
-const assert = require('assert');
-const utils = require('./utils');
-const {Amount} = require('../src/coretypes');
+import _ from 'lodash';
+import assert from 'assert';
+import * as utils from './utils.js';
+import coreTypes from '../src/coretypes.js';
+const {Amount} = coreTypes;
 const {loadFixture} = utils;
 const fixtures = loadFixture('data-driven-tests.json');
 

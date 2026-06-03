@@ -1,6 +1,6 @@
-const assert = require('assert');
-const fixtures = require('./fixtures/codec-fixtures.json');
-const {decode, encode, decodeLedgerData} = require('../src');
+import assert from 'assert';
+import fixtures from './fixtures/codec-fixtures.json' with { type: 'json' };
+import {decode, encode, decodeLedgerData} from '../src/index.js';
 
 function json(object) {
   return JSON.stringify(object);

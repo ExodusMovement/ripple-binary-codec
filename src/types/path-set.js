@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-expressions */
 
-const makeClass = require('../utils/make-class');
-const {SerializedType, ensureArrayLikeIs} = require('./serialized-type');
-const {Currency} = require('./currency');
-const {AccountID} = require('./account-id');
+import makeClass from '../utils/make-class.js';
+import {SerializedType, ensureArrayLikeIs} from './serialized-type.js';
+import {Currency} from './currency.js';
+import {AccountID} from './account-id.js';
 
 const PATHSET_END_BYTE = 0x00;
 const PATH_SEPARATOR_BYTE = 0xFF;
@@ -108,6 +108,6 @@ const PathSet = makeClass({
   }
 });
 
-module.exports = {
+export {
   PathSet
 };

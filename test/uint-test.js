@@ -1,5 +1,5 @@
-const assert = require('assert');
-const coreTypes = require('../src/coretypes');
+import assert from 'assert';
+import coreTypes from '../src/coretypes.js';
 /* eslint-disable no-unused-vars */
 const {UInt8, UInt16, UInt32, UInt64} = coreTypes;
 /* eslint-enable no-unused-vars */

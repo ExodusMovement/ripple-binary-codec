@@ -1,6 +1,6 @@
-const makeClass = require('../utils/make-class');
-const {Hash256} = require('./hash-256');
-const {ensureArrayLikeIs, SerializedType} = require('./serialized-type');
+import makeClass from '../utils/make-class.js';
+import {Hash256} from './hash-256.js';
+import {ensureArrayLikeIs, SerializedType} from './serialized-type.js';
 
 const Vector256 = makeClass({
   mixins: SerializedType,
@@ -27,6 +27,6 @@ const Vector256 = makeClass({
   }
 });
 
-module.exports = {
+export {
   Vector256
 };

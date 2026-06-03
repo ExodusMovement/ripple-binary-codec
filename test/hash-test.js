@@ -1,5 +1,6 @@
-const assert = require('assert');
-const {Hash160, Hash256, Currency, AccountID} = require('../src/coretypes');
+import assert from 'assert';
+import coreTypes from '../src/coretypes.js';
+const {Hash160, Hash256, Currency, AccountID} = coreTypes;
 
 describe('Hash160', function() {
   it('has a static width membmer', function() {

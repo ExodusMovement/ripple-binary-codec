@@ -1,13 +1,13 @@
 /* eslint-disable func-style */
 
-const BN = require('bn.js');
-const types = require('./types');
-const {HashPrefix} = require('./hash-prefixes');
-const {BinaryParser} = require('./serdes/binary-parser');
-const {BinarySerializer, BytesList} = require('./serdes/binary-serializer');
-const {bytesToHex, slice, parseBytes} = require('./utils/bytes-utils');
+import BN from 'bn.js';
+import types from './types/index.js';
+import {HashPrefix} from './hash-prefixes.js';
+import {BinaryParser} from './serdes/binary-parser.js';
+import {BinarySerializer, BytesList} from './serdes/binary-serializer.js';
+import {bytesToHex, slice, parseBytes} from './utils/bytes-utils.js';
 
-const {sha512Half, transactionID} = require('./hashes');
+import {sha512Half, transactionID} from './hashes.js';
 
 const makeParser = bytes => new BinaryParser(bytes);
 const readJSON = parser => parser.readType(types.STObject).toJSON();
@@ -50,7 +50,7 @@ function multiSigningData(tx, signingAccount) {
   return serializeObject(tx, {prefix, suffix, signingFieldsOnly: true});
 }
 
-module.exports = {
+export {
   BinaryParser,
   BinarySerializer,
   BytesList,

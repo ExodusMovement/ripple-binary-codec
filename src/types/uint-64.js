@@ -1,9 +1,9 @@
-const assert = require('assert');
-const BN = require('bn.js');
-const makeClass = require('../utils/make-class');
-const {bytesToHex, parseBytes, serializeUIntN}
-  = require('../utils/bytes-utils');
-const {UInt} = require('./uint');
+import assert from 'assert';
+import BN from 'bn.js';
+import makeClass from '../utils/make-class.js';
+import {bytesToHex, parseBytes, serializeUIntN}
+  from '../utils/bytes-utils.js';
+import {UInt} from './uint.js';
 
 const HEX_REGEX = /^[A-F0-9]{16}$/;
 
@@ -45,6 +45,6 @@ const UInt64 = makeClass({
   }
 });
 
-module.exports = {
+export {
   UInt64
 };

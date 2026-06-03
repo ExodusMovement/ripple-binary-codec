@@ -1,8 +1,8 @@
-const assert = require('assert');
-const {
+import assert from 'assert';
+import {
   encode,
   decode
-} = require('../src')
+} from '../src/index.js'
 
 // Notice: no Amount or Fee
 const tx_json = {

@@ -1,7 +1,7 @@
-const assert = require('assert');
-const makeClass = require('../utils/make-class');
-const {Comparable, SerializedType} = require('./serialized-type');
-const {compareBytes, parseBytes} = require('../utils/bytes-utils');
+import assert from 'assert';
+import makeClass from '../utils/make-class.js';
+import {Comparable, SerializedType} from './serialized-type.js';
+import {compareBytes, parseBytes} from '../utils/bytes-utils.js';
 
 const Hash = makeClass({
   Hash(bytes) {
@@ -41,6 +41,6 @@ const Hash = makeClass({
   }
 });
 
-module.exports = {
+export {
   Hash
 };

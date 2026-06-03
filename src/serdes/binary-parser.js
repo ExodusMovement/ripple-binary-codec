@@ -1,7 +1,8 @@
-const assert = require('assert');
-const makeClass = require('../utils/make-class');
-const {Field} = require('../enums');
-const {slice, parseBytes} = require('../utils/bytes-utils');
+import assert from 'assert';
+import makeClass from '../utils/make-class.js';
+import enums from '../enums/index.js';
+import {slice, parseBytes} from '../utils/bytes-utils.js';
+const {Field} = enums;
 
 const BinaryParser = makeClass({
   BinaryParser(buf) {
@@ -94,6 +95,6 @@ const BinaryParser = makeClass({
 });
 
 
-module.exports = {
+export {
   BinaryParser
 };
