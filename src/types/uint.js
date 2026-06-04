@@ -1,8 +1,8 @@
-const assert = require('assert');
-const BN = require('bn.js');
-const makeClass = require('../utils/make-class');
-const {Comparable, SerializedType} = require('./serialized-type');
-const {serializeUIntN} = require('../utils/bytes-utils');
+import assert from 'assert';
+import BN from 'bn.js';
+import makeClass from '../utils/make-class.js';
+import {Comparable, SerializedType} from './serialized-type.js';
+import {serializeUIntN} from '../utils/bytes-utils.js';
 const MAX_VALUES = [0, 255, 65535, 16777215, 4294967295];
 
 function signum(a, b) {
@@ -56,6 +56,6 @@ const UInt = makeClass({
   }
 });
 
-module.exports = {
+export {
   UInt
 };

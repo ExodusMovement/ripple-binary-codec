@@ -1,11 +1,11 @@
-const makeClass = require('../utils/make-class');
-const {Hash} = require('./hash');
+import makeClass from '../utils/make-class.js';
+import {Hash} from './hash.js';
 
 const Hash128 = makeClass({
   inherits: Hash,
   statics: {width: 16}
 });
 
-module.exports = {
+export {
   Hash128
 };

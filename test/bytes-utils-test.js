@@ -1,5 +1,5 @@
-const assert = require('assert');
-const bytesUtils = require('../src/utils/bytes-utils');
+import assert from 'assert';
+import * as bytesUtils from '../src/utils/bytes-utils.js';
 const {slice, compareBytes, parseBytes, bytesToHex} = bytesUtils;
 
 describe('bytes-utils', function() {

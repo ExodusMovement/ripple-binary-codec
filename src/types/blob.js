@@ -1,6 +1,6 @@
-const makeClass = require('../utils/make-class');
-const {parseBytes} = require('../utils/bytes-utils');
-const {SerializedType} = require('./serialized-type');
+import makeClass from '../utils/make-class.js';
+import {parseBytes} from '../utils/bytes-utils.js';
+import {SerializedType} from './serialized-type.js';
 
 const Blob = makeClass({
   mixins: SerializedType,
@@ -24,6 +24,6 @@ const Blob = makeClass({
   }
 });
 
-module.exports = {
+export {
   Blob
 };

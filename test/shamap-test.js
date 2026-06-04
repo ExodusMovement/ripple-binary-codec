@@ -1,8 +1,8 @@
-const assert = require('assert');
-const {ShaMap} = require('../src/shamap.js');
-const {binary: {serializeObject}, Hash256, HashPrefix}
-  = require('../src/coretypes');
-const {loadFixture} = require('./utils');
+import assert from 'assert';
+import {ShaMap} from '../src/shamap.js';
+import coreTypes from '../src/coretypes.js';
+import {loadFixture} from './utils.js';
+const {binary: {serializeObject}, Hash256, HashPrefix} = coreTypes;
 
 function now() {
   return (Number(Date.now())) / 1000;

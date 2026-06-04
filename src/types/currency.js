@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const makeClass = require('../utils/make-class');
-const {slice} = require('../utils/bytes-utils');
-const {Hash160} = require('./hash-160');
+import _ from 'lodash';
+import makeClass from '../utils/make-class.js';
+import {slice} from '../utils/bytes-utils.js';
+import {Hash160} from './hash-160.js';
 const ISO_REGEX = /^[A-Z0-9]{3}$/;
 const HEX_REGEX = /^[A-F0-9]{40}$/;
 
@@ -87,6 +87,6 @@ const Currency = makeClass({
   }
 });
 
-module.exports = {
+export {
   Currency
 };

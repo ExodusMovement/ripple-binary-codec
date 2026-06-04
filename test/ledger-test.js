@@ -1,6 +1,6 @@
-const assert = require('assert');
-const {loadFixture} = require('./utils');
-const ledgerHashes = require('../src/ledger-hashes');
+import assert from 'assert';
+import {loadFixture} from './utils.js';
+import * as ledgerHashes from '../src/ledger-hashes.js';
 const {transactionTreeHash, ledgerHash, accountStateHash} = ledgerHashes;
 
 describe('Ledger Hashes', function() {

@@ -1,7 +1,8 @@
-const assert = require('assert');
-const {parseBytes, bytesToHex} = require('../utils/bytes-utils');
-const makeClass = require('../utils/make-class');
-const {Type, Field} = require('../enums');
+import assert from 'assert';
+import {parseBytes, bytesToHex} from '../utils/bytes-utils.js';
+import makeClass from '../utils/make-class.js';
+import enums from '../enums/index.js';
+const {Type, Field} = enums;
 
 const BytesSink = {
   put(/* bytesSequence */) {
@@ -101,7 +102,7 @@ const BinarySerializer = makeClass({
   }
 });
 
-module.exports = {
+export {
   BytesList,
   BinarySerializer
 };

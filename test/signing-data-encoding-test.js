@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const assert = require('assert');
-const {encodeForSigning, encodeForSigningClaim, encodeForMultisigning} =
-  require('../src');
+import _ from 'lodash';
+import assert from 'assert';
+import {encodeForSigning, encodeForSigningClaim, encodeForMultisigning}
+  from '../src/index.js';
 
 const tx_json = {
   Account: 'r9LqNeG6qHxjeUocjvVki2XR35weJ9mZgQ',

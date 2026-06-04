@@ -1,9 +1,10 @@
-const _ = require('lodash');
-const makeClass = require('../utils/make-class');
-const {Field} = require('../enums');
-const {BinarySerializer} = require('../serdes/binary-serializer');
+import _ from 'lodash';
+import makeClass from '../utils/make-class.js';
+import enums from '../enums/index.js';
+import {BinarySerializer} from '../serdes/binary-serializer.js';
+import {SerializedType} from './serialized-type.js';
+const {Field} = enums;
 const {ObjectEndMarker} = Field;
-const {SerializedType} = require('./serialized-type');
 
 const STObject = makeClass({
   mixins: SerializedType,
@@ -61,6 +62,6 @@ const STObject = makeClass({
   }
 });
 
-module.exports = {
+export {
   STObject
 };

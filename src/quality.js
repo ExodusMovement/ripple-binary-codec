@@ -1,9 +1,10 @@
-const Decimal = require('decimal.js').default;
-const {bytesToHex, slice, parseBytes} = require('./utils/bytes-utils');
-const {UInt64} = require('./types');
-const BN = require('bn.js');
+import Decimal from 'decimal.js';
+import {bytesToHex, slice, parseBytes} from './utils/bytes-utils.js';
+import types from './types/index.js';
+import BN from 'bn.js';
+const {UInt64} = types;
 
-module.exports = {
+export default {
   encode(arg) {
     const quality = arg instanceof Decimal ? arg : new Decimal(arg);
     const exponent = quality.e - 15;

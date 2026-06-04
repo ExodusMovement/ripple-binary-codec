@@ -1,11 +1,11 @@
-const makeClass = require('../utils/make-class');
-const {UInt} = require('./uint');
+import makeClass from '../utils/make-class.js';
+import {UInt} from './uint.js';
 
 const UInt8 = makeClass({
   inherits: UInt,
   statics: {width: 1}
 });
 
-module.exports = {
+export {
   UInt8
 };

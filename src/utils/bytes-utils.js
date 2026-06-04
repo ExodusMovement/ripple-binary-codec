@@ -1,4 +1,4 @@
-const assert = require('assert');
+import assert from 'assert';
 
 function signum(a, b) {
   return a < b ? -1 : a === b ? 0 : 1;
@@ -104,7 +104,7 @@ function slice(val, startIx = 0, endIx = val.length, Output = val.constructor) {
   return res;
 }
 
-module.exports = {
+export {
   parseBytes,
   bytesToHex,
   slice,

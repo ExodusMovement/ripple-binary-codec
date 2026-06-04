@@ -1,5 +1,5 @@
-const assert = require('assert');
-const coreTypes = require('./coretypes');
+import assert from 'assert';
+import coreTypes from './coretypes.js';
 const {quality,
        binary: {bytesToHex,
                 signingData,
@@ -61,7 +61,23 @@ function decodeQuality(value) {
   return quality.decode(value).toString();
 }
 
-module.exports = {
+export {
+  decode,
+  encode,
+  encodeForSigning,
+  encodeForSigningClaim,
+  encodeForMultisigning,
+  encodeQuality,
+  decodeQuality,
+  decodeLedgerData
+};
+
+// Preserve the CommonJS `module.exports = { ... }` shape as the ESM default
+// export, so existing default-import consumers (e.g. `@exodus/ripple-lib`'s
+// sign paths and `hw-ledger`, which do `import binaryCodec from
+// '@exodus/ripple-binary-codec'` then call `binaryCodec.encode(...)`) keep
+// working. Named exports above cover `import { encode } from ...` consumers.
+export default {
   decode,
   encode,
   encodeForSigning,

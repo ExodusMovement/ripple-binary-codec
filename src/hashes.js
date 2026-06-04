@@ -1,8 +1,9 @@
-const makeClass = require('./utils/make-class');
-const {HashPrefix} = require('./hash-prefixes');
-const {Hash256} = require('./types');
-const {parseBytes} = require('./utils/bytes-utils');
-const createHash = require('create-hash');
+import makeClass from './utils/make-class.js';
+import {HashPrefix} from './hash-prefixes.js';
+import types from './types/index.js';
+import {parseBytes} from './utils/bytes-utils.js';
+import createHash from 'create-hash';
+const {Hash256} = types;
 
 const Sha512Half = makeClass({
   Sha512Half() {
@@ -36,7 +37,7 @@ function transactionID(serialized) {
   return new Hash256(sha512Half(HashPrefix.transactionID, serialized));
 }
 
-module.exports = {
+export {
   Sha512Half,
   sha512Half,
   transactionID

@@ -1,13 +1,13 @@
-const _ = require('lodash');
-const assert = require('assert');
-const BN = require('bn.js');
-const Decimal = require('decimal.js').default;
-const makeClass = require('../utils/make-class');
-const {SerializedType} = require('./serialized-type');
-const {bytesToHex} = require('../utils/bytes-utils');
-const {Currency} = require('./currency');
-const {AccountID} = require('./account-id');
-const {UInt64} = require('./uint-64');
+import _ from 'lodash';
+import assert from 'assert';
+import BN from 'bn.js';
+import Decimal from 'decimal.js';
+import makeClass from '../utils/make-class.js';
+import {SerializedType} from './serialized-type.js';
+import {bytesToHex} from '../utils/bytes-utils.js';
+import {Currency} from './currency.js';
+import {AccountID} from './account-id.js';
+import {UInt64} from './uint-64.js';
 
 const MIN_IOU_EXPONENT = -96;
 const MAX_IOU_EXPONENT = 80;
@@ -211,6 +211,6 @@ const Amount = makeClass({
   }
 });
 
-module.exports = {
+export {
   Amount
 };

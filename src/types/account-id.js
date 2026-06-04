@@ -1,9 +1,9 @@
-const makeClass = require('../utils/make-class');
-const {
+import makeClass from '../utils/make-class.js';
+import {
   decodeAccountID,
   encodeAccountID
-} = require('@exodus/ripple-address-codec');
-const {Hash160} = require('./hash-160');
+} from '@exodus/ripple-address-codec';
+import {Hash160} from './hash-160.js';
 
 const AccountID = makeClass({
   AccountID(bytes) {
@@ -40,6 +40,6 @@ const AccountID = makeClass({
   }
 });
 
-module.exports = {
+export {
   AccountID
 };

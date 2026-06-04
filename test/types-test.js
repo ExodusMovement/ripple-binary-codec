@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const assert = require('assert');
-const coreTypes = require('../src/types');
-const {SerializedType} = require('../src/types/serialized-type');
+import _ from 'lodash';
+import assert from 'assert';
+import coreTypes from '../src/types/index.js';
+import {SerializedType} from '../src/types/serialized-type.js';
 
 describe('SerializedType interfaces', () => {
   _.forOwn(coreTypes, (Value, name) => {

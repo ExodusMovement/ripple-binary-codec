@@ -1,9 +1,13 @@
-const intercept = require('intercept-stdout');
-const fs = require('fs');
-const fsExtra = require('fs-extra');
-const assert = require('assert');
-const Decimal = require('decimal.js');
-const {parseBytes} = require('../src/utils/bytes-utils');
+import intercept from 'intercept-stdout';
+import fs from 'fs';
+import fsExtra from 'fs-extra';
+import assert from 'assert';
+import Decimal from 'decimal.js';
+import {createRequire} from 'module';
+import {parseBytes} from '../src/utils/bytes-utils.js';
+
+const require = createRequire(import.meta.url);
+const __dirname = import.meta.dirname;
 
 function hexOnly(hex) {
   return hex.replace(/[^a-fA-F0-9]/g, '');
@@ -80,7 +84,7 @@ function assertEqualAmountJSON(actual, expected) {
               new Decimal(expected.value)));
 }
 
-module.exports = {
+export {
   hexOnly,
   parseHexOnly,
   loadFixture,
