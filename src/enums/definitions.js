@@ -1,4 +1,6 @@
-{
+// XRP binary codec definitions, inlined as an ESM data module so consumers with
+// older bundlers (e.g. webpack 4) can parse it without a JSON import attribute.
+export default {
   "TYPES": {
     "Validation": 10003,
     "Done": -1,
