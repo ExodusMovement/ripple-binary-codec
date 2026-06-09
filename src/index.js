@@ -72,11 +72,11 @@ export {
   decodeLedgerData
 };
 
-// Preserve the CommonJS `module.exports = { ... }` shape as the ESM default
-// export, so existing default-import consumers (e.g. `@exodus/ripple-lib`'s
-// sign paths and `hw-ledger`, which do `import binaryCodec from
-// '@exodus/ripple-binary-codec'` then call `binaryCodec.encode(...)`) keep
-// working. Named exports above cover `import { encode } from ...` consumers.
+// Mirror the legacy CommonJS default-object shape as the ESM default export,
+// so existing default-import consumers (e.g. `@exodus/ripple-lib`'s sign paths
+// and `hw-ledger`, which do `import binaryCodec from '@exodus/ripple-binary-codec'`
+// then call `binaryCodec.encode(...)`) keep working. Named exports above cover
+// `import { encode } from ...` consumers.
 export default {
   decode,
   encode,
