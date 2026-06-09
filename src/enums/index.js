@@ -2,7 +2,7 @@ import assert from 'assert';
 import _ from 'lodash';
 import {parseBytes, serializeUIntN} from './../utils/bytes-utils.js';
 import makeClass from './../utils/make-class.js';
-import enums from './definitions.json' with { type: 'json' };
+import enums from './definitions.js';
 
 function transformWith(func, obj) {
   return _.transform(obj, func);
